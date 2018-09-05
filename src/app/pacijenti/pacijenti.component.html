@@ -1,7 +1,11 @@
 <div class="container">
 	<h2>Pacijenti</h2>
-	<input type="text" placeholder="Ime I Prezime"><br><br>
-	<input type="text" placeholder="JMBG"><br><br>
-	<input type="text" placeholder="Br. Zdravstvenog Kartona"><br><br>
-	<button type="button">Dodaj</button>
+	<ul class="border">
+		<li *ngFor = 'let pacijent of spisakPacijenata'>{{pacijent}}</li>
+	</ul>
+	<input #ime [(ngModel)] = 'ime1' name="name" type="text" placeholder="Ime I Prezime"><br><br>
+	<input #jmbg [(ngModel)] = 'jmbg1' name="jmbg" type="text" placeholder="JMBG"><br><br>
+	<input #bzk [(ngModel)] = 'bzk1' name='bzk' type="text" placeholder="Br. Zdravstvenog Kartona"><br><br>
+	<button (click) = 'pacijenti(ime.value, jmbg.value, bzk.value)' type="button">Dodaj</button>
+
 </div>

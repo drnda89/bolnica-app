@@ -16,17 +16,12 @@ export class DoktoriComponent implements OnInit {
 		ime2: ''
 	};
 
-
-	
-	
-
   constructor() { }
 
   ngOnInit() {
   }
 
   dodaj(bla) {
-  	
   	this.prikaz = true;
   	this.ime = bla;
   	this.ime3.push(this.doktor.ime1, this.doktor.ime2);
@@ -39,8 +34,7 @@ export class DoktoriComponent implements OnInit {
   	 this.doktor.ime2 = '';
   	
   	console.log(bla.value);
-  	
-  		
+  			
   }
 
 }
