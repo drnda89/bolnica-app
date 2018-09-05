@@ -1,0 +1,10 @@
+.vl {
+	border-left: 1px solid black;
+    height: 630px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+    
+}
+

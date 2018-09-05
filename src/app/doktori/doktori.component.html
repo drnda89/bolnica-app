@@ -1,0 +1,20 @@
+<div class="container">
+	<h2>Doktori</h2>
+	 <br> 
+	<ng-container *ngIf = 'prikaz' > 
+		<ul>
+			<li *ngFor ='let pera of ime3' class="border">{{pera}} </li>
+		</ul>
+	 </ng-container>
+	
+	<br><br>
+	<form #bla = 'ngForm'>
+		<input  [(ngModel)]= 'doktor.ime1' name = 'ime' type="text" placeholder="Ime i Prezime">
+		<br><br>
+		<input [(ngModel)]= 'doktor.ime2' name = 'specijalnost' type="text" placeholder="Specijalnost">
+		<br><br>
+		<button (click) = 'dodaj(bla); $event.preventDefault()'>Dodaj</button>
+		<!-- <button type="submit">Dodaj</button> -->
+	</form>
+	
+</div>

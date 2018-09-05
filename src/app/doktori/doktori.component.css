@@ -1,0 +1,15 @@
+.border {
+	border: 1px solid black;
+	margin-right: 950px;
+}
+
+.container {
+	position: absolute;
+	margin-left: 250px;
+	margin-top:50px;
+	top: -42px;
+}
+
+ul {
+	list-style: none;
+}
