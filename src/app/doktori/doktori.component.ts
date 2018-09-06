@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-doktori',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./doktori.component.css']
 })
 export class DoktoriComponent implements OnInit {
-	
+	@Output() izDoktori = new EventEmitter()
+
 	prikaz = false;
 	
 	ime = '';
@@ -32,6 +33,7 @@ export class DoktoriComponent implements OnInit {
   	 }
   	 this.doktor.ime1 = '';
   	 this.doktor.ime2 = '';
+     this.izDoktori.emit(bla.value);
   	
   	console.log(bla.value);
   			
