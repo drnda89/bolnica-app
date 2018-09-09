@@ -13,8 +13,8 @@ export class DoktoriComponent implements OnInit {
 	ime = '';
 	ime3 = [];
 	doktor = {
-		ime1: '',
-		ime2: ''
+		ime1: 'Bojan Drinic',
+		ime2: 'Doktor'
 	};
 
   constructor() { }
