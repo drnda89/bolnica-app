@@ -13,9 +13,13 @@ export class DoktoriComponent implements OnInit {
 	ime = '';
 	ime3 = [];
 	doktor = {
-		ime1: 'Bojan Drinic',
-		ime2: 'Doktor'
+		ime1: '',
+		spec1: '',
+		ime: '',
+		spec: ''
 	};
+
+
 
   constructor() { }
 
@@ -24,16 +28,18 @@ export class DoktoriComponent implements OnInit {
 
   dodaj(bla) {
   	this.prikaz = true;
-  	this.ime = bla;
-  	this.ime3.push(this.doktor.ime1, this.doktor.ime2);
-  	if(this.doktor.ime1 === '' || this.doktor.ime2 === '') {
-  		this.prikaz = false;
-  		this.ime3.splice(2);
-  		alert('polje je prazno')
-  	 }
-  	 this.doktor.ime1 = '';
-  	 this.doktor.ime2 = '';
-     this.izDoktori.emit(bla.value);
+  	// this.ime = bla;
+  	this.ime3.push(this.doktor);
+  	// if(this.doktor.ime1 === '' || this.doktor.spec1 === '') {
+  	// 	this.prikaz = false;
+  	// 	this.ime3.splice(2);
+  	// 	alert('polje je prazno')
+  	//  }
+	// this.doktor.ime = '';
+	// this.doktor.spec = '';
+
+
+    this.izDoktori.emit(bla.value);
   	
   	console.log(bla.value);
   			

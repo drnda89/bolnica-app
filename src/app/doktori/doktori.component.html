@@ -2,16 +2,16 @@
 	<h2>Doktori</h2>
 	 <br> 
 	<ng-container *ngIf = 'prikaz'> 
-		<ul class="border">
-			<li *ngFor ='let doktor of ime3'>{{doktor}}</li>
+		<ul *ngFor ='let doktor of ime3' class="border">
+			<li >{{doktor.ime}} <br> {{doktor.spec}}</li>
 		</ul>
 	 </ng-container>
 	
 	<br><br>
 	<form #bla = 'ngForm'>
-		<input [(ngModel)]= 'doktor.ime1' name = 'ime' type="text" placeholder="Ime i Prezime">
+		<input [(ngModel)]= 'doktor.ime' name = 'ime' type="text" placeholder="Ime i Prezime">
 		<br><br>
-		<input [(ngModel)]= 'doktor.ime2' name = 'specijalnost' type="text" placeholder="Specijalnost">
+		<input [(ngModel)]= 'doktor.spec' name = 'specijalnost' type="text" placeholder="Specijalnost">
 		<br><br>
 		<button (click) = 'dodaj(bla); $event.preventDefault()'>Dodaj</button>
 		<!-- <button type="submit">Dodaj</button> -->
