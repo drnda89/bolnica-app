@@ -1,12 +1,14 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
+import { ShareService } from '../share.service';
+
 @Component({
   selector: 'app-doktori',
   templateUrl: './doktori.component.html',
   styleUrls: ['./doktori.component.css']
 })
 export class DoktoriComponent implements OnInit {
-	@Output() izDoktori = new EventEmitter()
+	// @Output() izDoktori = new EventEmitter()
 
 	prikaz = false;
 	ime = '';
@@ -16,7 +18,7 @@ export class DoktoriComponent implements OnInit {
 		spec1: ''
 	};
 
-  constructor() { }
+  constructor(private share: ShareService) { }
 
   ngOnInit() {
   }
@@ -32,7 +34,7 @@ export class DoktoriComponent implements OnInit {
 	// this.doktor.ime1 = '';
 	// this.doktor.spec1 = '';
 
-    this.izDoktori.emit(bla.value);	
+    this.share.razmena.emit(bla.value);	
   	console.log(bla.value);			
   }
 

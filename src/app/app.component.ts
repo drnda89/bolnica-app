@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'app';
   public clickedEvent;
 
-   childEventClicked(event) {
-    this.clickedEvent = event;
-  }
+  //  childEventClicked(event) {
+  //   this.clickedEvent = event;
+  // }
 }
