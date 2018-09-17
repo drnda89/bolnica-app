@@ -32,7 +32,7 @@ export class DoktoriComponent implements OnInit {
 	
   	if(this.doktor.ime1 === '' || this.doktor.spec1 === '') {
   		this.prikaz = false;
-			// this.ime3.splice(2);
+			this.ime3.splice(1);
 			this.ime3.pop();
   		alert('polje je prazno')
 		 }
