@@ -15,9 +15,10 @@ export class PacijentiComponent implements OnInit {
   jmbg1 = '445566778899';
   bzk1 = '1234';
   prikaz = false;
+  imeDoktora;
 
   constructor(private share: ShareService) {
-  	this.share.razmena.subscribe((bla) => alert(bla.ime1));
+    this.share.razmena.subscribe((bla) => this.imeDoktora = bla);
    }
 
   ngOnInit() {
@@ -34,7 +35,7 @@ export class PacijentiComponent implements OnInit {
   	this.ime1 = '';
   	this.jmbg1 = '';
   	this.bzk1 = '';
-  	
+    
  
   }
 

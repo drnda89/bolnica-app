@@ -17,6 +17,7 @@ export class DoktoriComponent implements OnInit {
 		ime1: '',
 		spec1: ''
 	};
+	dr = '';
 
   constructor(private share: ShareService) { }
 
@@ -24,18 +25,23 @@ export class DoktoriComponent implements OnInit {
   }
 
   dodaj(bla) {
-  	this.prikaz = true;
-  	this.ime3.push(this.doktor);
-  	// if(this.doktor.ime1 === '' || this.doktor.spec1 === '') {
-  	// 	this.prikaz = false;
-  	// 	this.ime3.splice(2);
-  	// 	alert('polje je prazno')
-		//  }
-	// this.doktor.ime1 = '';
-	// this.doktor.spec1 = '';
+		this.prikaz = true;
+		this.dr = bla.value;
+		this.ime3.push(this.dr);
+		console.log(this.doktor);
+	
+  	if(this.doktor.ime1 === '' || this.doktor.spec1 === '') {
+  		this.prikaz = false;
+			// this.ime3.splice(2);
+			this.ime3.pop();
+  		alert('polje je prazno')
+		 }
 
-    this.share.razmena.emit(bla.value);	
-  	console.log(bla.value);			
+		this.doktor.ime1 = '';
+		this.doktor.spec1 = '';
+
+		this.share.razmena.emit(bla.value);	
+  	console.log(bla);			
   }
 
 }
