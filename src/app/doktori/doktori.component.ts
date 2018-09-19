@@ -14,8 +14,8 @@ export class DoktoriComponent implements OnInit {
 	ime = '';
 	ime3 = [];
 	doktor = {
-		ime1: '',
-		spec1: ''
+		ime1: 'Bojan Drinic',
+		spec1: 'Hirurg'
 	};
 	dr = '';
 

@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { ShareService } from '../share.service';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-pacijenti',
@@ -16,6 +15,8 @@ export class PacijentiComponent implements OnInit {
   bzk1 = '1234';
   prikaz = false;
   imeDoktora;
+  imeSelect;
+  show = true;
 
   constructor(private share: ShareService) {
     this.share.razmena.subscribe((bla) => this.imeDoktora = bla);
@@ -38,6 +39,17 @@ export class PacijentiComponent implements OnInit {
     
  
   }
+
+  onChange(deviceValue) {
+    this.imeSelect = deviceValue;
+    this.spisakPacijenata.push(deviceValue);
+  	this.prikaz = true;
+  
+  	this.ime1 = '';
+  	this.jmbg1 = '';
+  	this.bzk1 = '';
+  	this.show = false;
+}
 
 
 }
