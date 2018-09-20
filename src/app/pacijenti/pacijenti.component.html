@@ -4,7 +4,7 @@
 		<select *ngIf = 'show' (change)="onChange($event.target.value)" class="custom-select">
 			<option>Izaberite Lekara</option>
 			<!-- <option>{{event.ime}}</option> -->
-			<option><span *ngIf = 'text'>Izabrani Lekar: </span>{{imeDoktora.ime}}</option>
+			<option>{{imeDoktora.ime}}</option>
 		</select>
 		
 	</ul>

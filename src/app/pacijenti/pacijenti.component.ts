@@ -17,19 +17,20 @@ export class PacijentiComponent implements OnInit {
   imeDoktora;
   imeSelect;
   show = true;
-  text = false;
+  pc;
 
   constructor(private share: ShareService) {
     this.share.razmena.subscribe((bla) => this.imeDoktora = bla);
    }
 
   ngOnInit() {
-  	
+  
   }
   
-
   pacijenti(ime, jmbg, bzk) {
-  	this.spisakPacijenata.push(ime, jmbg, bzk);
+  	this.pc = ime + jmbg + bzk;
+  	this.spisakPacijenata.push(this.pc);
+
   	this.prikaz = true;
   	if(this.ime1 === '' || this.jmbg1 === '' || this.bzk1 === '') {
       this.prikaz = false;
@@ -38,20 +39,17 @@ export class PacijentiComponent implements OnInit {
   	this.ime1 = '';
   	this.jmbg1 = '';
     this.bzk1 = '';
-  
+  	console.log(this.imeDoktora);
 }
 
 onChange(deviceValue) {
   this.imeSelect = deviceValue;
-  this.spisakPacijenata.push(deviceValue);
+  this.spisakPacijenata.push('Izabrani Lekar: '+ deviceValue);
   this.prikaz = true;
-
   this.ime1 = '';
   this.jmbg1 = '';
   this.bzk1 = '';
   this.show = false;
-  this.text = true;
-  
 }
 
 }

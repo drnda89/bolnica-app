@@ -29,7 +29,7 @@ export class DoktoriComponent implements OnInit {
 		this.dr = bla.value;
 		this.ime3.push(this.dr);
 		console.log(this.doktor);
-	
+	 
   	if(this.doktor.ime1 === '' || this.doktor.spec1 === '') {
   		this.prikaz = false;
 			this.ime3.splice(1);
@@ -40,8 +40,15 @@ export class DoktoriComponent implements OnInit {
 		this.doktor.ime1 = '';
 		this.doktor.spec1 = '';
 
+    // this.ime3.forEach((ime) => ime)
+    //  for(let i = 0; i < this.ime3.length; i++) {
+    //    this.share.razmena.emit(this.ime3[i]);
+    // }
+
+    console.log(this.ime3);
 		this.share.razmena.emit(bla.value);	
+    
   	console.log(bla);			
-  }
+      }
 
 }
