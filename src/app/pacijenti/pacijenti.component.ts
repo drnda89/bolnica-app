@@ -16,6 +16,7 @@ export class PacijentiComponent implements OnInit {
   bzk1 = '1234';
   prikaz = false;
   imeDoktora;
+  prikazOpcije = false;
 
   constructor(private share: ShareService) {
     this.share.razmena.subscribe((bla) => this.imeDoktora = bla);
@@ -24,6 +25,7 @@ export class PacijentiComponent implements OnInit {
   ngOnInit() {
   	
   }
+  
 
   pacijenti(ime, jmbg, bzk) {
   	this.spisakPacijenata.push(ime, jmbg, bzk);
@@ -34,10 +36,9 @@ export class PacijentiComponent implements OnInit {
  	}
   	this.ime1 = '';
   	this.jmbg1 = '';
-  	this.bzk1 = '';
+    this.bzk1 = '';
     
- 
+   
+    this.prikazOpcije = true;
   }
-
-
 }

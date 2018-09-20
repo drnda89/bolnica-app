@@ -5,7 +5,7 @@
 		<select>
 			<option>Izaberite Lekara</option>
 			<!-- <option>{{event.ime}}</option> -->
-			<option>{{imeDoktora.ime}}</option>
+			<option *ngIf = 'prikazOpcije'>{{imeDoktora.ime}}</option>
 		</select>
 	</ul>
 	<br><br>
