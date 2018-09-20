@@ -17,6 +17,7 @@ export class PacijentiComponent implements OnInit {
   imeDoktora;
   imeSelect;
   show = true;
+  text = false;
 
   constructor(private share: ShareService) {
     this.share.razmena.subscribe((bla) => this.imeDoktora = bla);
@@ -31,15 +32,13 @@ export class PacijentiComponent implements OnInit {
   	this.spisakPacijenata.push(ime, jmbg, bzk);
   	this.prikaz = true;
   	if(this.ime1 === '' || this.jmbg1 === '' || this.bzk1 === '') {
- 		this.prikaz = false;
- 		alert('prazno polje');
+      this.prikaz = false;
+      alert('prazno polje');
  	}
   	this.ime1 = '';
   	this.jmbg1 = '';
     this.bzk1 = '';
-    
-   
-    this.show = true;
+  
 }
 
 onChange(deviceValue) {
@@ -51,6 +50,8 @@ onChange(deviceValue) {
   this.jmbg1 = '';
   this.bzk1 = '';
   this.show = false;
+  this.text = true;
+  
 }
 
 }

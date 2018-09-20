@@ -4,8 +4,9 @@
 		<select *ngIf = 'show' (change)="onChange($event.target.value)" class="custom-select">
 			<option>Izaberite Lekara</option>
 			<!-- <option>{{event.ime}}</option> -->
-			<option *ngIf = 'prikazOpcije'>{{imeDoktora.ime}}</option>
+			<option><span *ngIf = 'text'>Izabrani Lekar: </span>{{imeDoktora.ime}}</option>
 		</select>
+		
 	</ul>
 	<br><br>
 	<input class="col-5" #ime [(ngModel)] = 'ime1' name="name" type="text" placeholder="Ime I Prezime"><br><br>
