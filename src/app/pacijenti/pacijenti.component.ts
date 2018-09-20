@@ -42,5 +42,15 @@ export class PacijentiComponent implements OnInit {
     this.show = true;
 }
 
+onChange(deviceValue) {
+  this.imeSelect = deviceValue;
+  this.spisakPacijenata.push(deviceValue);
+  this.prikaz = true;
+
+  this.ime1 = '';
+  this.jmbg1 = '';
+  this.bzk1 = '';
+  this.show = false;
+}
 
 }
