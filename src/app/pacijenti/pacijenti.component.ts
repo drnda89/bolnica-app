@@ -17,7 +17,6 @@ export class PacijentiComponent implements OnInit {
   imeDoktora;
   imeSelect;
   show = true;
-  pc;
 
   constructor(private share: ShareService) {
     this.share.razmena.subscribe((bla) => this.imeDoktora = bla);
@@ -27,10 +26,8 @@ export class PacijentiComponent implements OnInit {
   
   }
   
-  pacijenti(ime, jmbg, bzk) {
-  	this.pc = ime + jmbg + bzk;
-  	this.spisakPacijenata.push(this.pc);
-
+  pacijenti(bla2) {
+  	this.spisakPacijenata.push(bla2.value);
   	this.prikaz = true;
   	if(this.ime1 === '' || this.jmbg1 === '' || this.bzk1 === '') {
       this.prikaz = false;
@@ -39,17 +36,16 @@ export class PacijentiComponent implements OnInit {
   	this.ime1 = '';
   	this.jmbg1 = '';
     this.bzk1 = '';
-  	console.log(this.imeDoktora);
+    console.log(bla2.value);
 }
 
-onChange(deviceValue) {
-  this.imeSelect = deviceValue;
-  this.spisakPacijenata.push('Izabrani Lekar: '+ deviceValue);
+onChange() {
+  this.spisakPacijenata.push('Izabrani Lekar: '+ this.imeDoktora);
   this.prikaz = true;
   this.ime1 = '';
   this.jmbg1 = '';
   this.bzk1 = '';
-  this.show = false;
+  this.show = true;
 }
 
 }
