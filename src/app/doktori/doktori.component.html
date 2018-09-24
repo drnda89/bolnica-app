@@ -2,7 +2,7 @@
 	 <br> 
 	<ng-container *ngIf = 'prikaz'> 
 		<ul *ngFor ='let doktor of ime3' class="border border-success rounded list-unstyled pl-3 pt-3 pb-3">
-			<li >{{doktor.ime}} <br> {{doktor.specijalnost}}</li>
+			<li >{{'Ime: '+doktor.ime}} <br> {{'Specijalnost: '+doktor.specijalnost}}</li>
 		</ul>
 	 </ng-container>
 	
@@ -12,6 +12,6 @@
 		<br><br>
 		<input [(ngModel)]= 'doktor.spec1' name = 'specijalnost' type="text" placeholder="Specijalnost">
 		<br><br>
-		<button class="btn btn-success" (click) = 'dodaj(bla); $event.preventDefault()'>Dodaj</button>
+		<button class="btn btn-success" (click) = 'dodaj(bla)'>Dodaj</button>
 		<!-- <button type="submit">Dodaj</button> -->
 	</form>

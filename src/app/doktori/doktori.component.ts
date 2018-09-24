@@ -46,7 +46,7 @@ export class DoktoriComponent implements OnInit {
     // }
 
     console.log(this.ime3);
-		this.share.razmena.emit(bla.value);	
+	this.share.razmena.emit(bla.value);	
     
   	console.log(bla);			
       }
