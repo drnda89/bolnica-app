@@ -14,13 +14,13 @@ export class PacijentiComponent implements OnInit {
   jmbg1 = '445566778899';
   bzk1 = '1234';
   prikaz = false;
-  imeDoktora;
+  imeDoktora = [];
   imeSelect;
   show = true;
   pc;
 
   constructor(private share: ShareService) {
-    this.share.razmena.subscribe((bla) => this.imeDoktora = bla);
+    this.share.razmena.subscribe((bla2) => this.imeDoktora = bla2);
    }
 
   ngOnInit() {
@@ -35,6 +35,9 @@ export class PacijentiComponent implements OnInit {
       this.spisakPacijenata.splice(1);
 			this.spisakPacijenata.pop();
       alert('prazno polje');
+   } else if(!this.imeDoktora) {
+   		alert('Nema slobodnog doktora!');
+   		this.prikaz = false;
    }
    	this.ime1 = '';
   	this.jmbg1 = '';

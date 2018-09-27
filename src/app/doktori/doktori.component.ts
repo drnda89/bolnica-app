@@ -10,7 +10,7 @@ import { ShareService } from '../share.service';
 export class DoktoriComponent implements OnInit {
 	// @Output() izDoktori = new EventEmitter()
 
-	prikaz = false;
+	prikaz = true;
 	ime = '';
 	ime3 = [];
 	doktor = {
@@ -46,7 +46,7 @@ export class DoktoriComponent implements OnInit {
     // }
 
     console.log(this.ime3);
-	this.share.razmena.emit(bla.value);	
+  this.share.razmena.emit(this.ime3);  
     
   	console.log(bla);			
       }

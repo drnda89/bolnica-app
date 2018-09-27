@@ -5,7 +5,7 @@
 			<select *ngIf = 'show' (change)="onChange($event.target.value)" class="custom-select">
 				<option>Izaberite Lekara</option>
 				<!-- <option>{{event.ime}}</option> -->
-				<option>{{imeDoktora.ime}}</option>
+				<option *ngFor="let lista of imeDoktora">{{lista.ime}}</option>
 			</select>
 		</ul>
 	</ng-container>
