@@ -15,7 +15,6 @@ export class PacijentiComponent implements OnInit {
   bzk1 = '1234';
   prikaz = false;
   imeDoktora = [];
-  imeSelect;
   show = true;
   pc;
 
@@ -38,11 +37,12 @@ export class PacijentiComponent implements OnInit {
    } else if(!this.imeDoktora) {
    		alert('Nema slobodnog doktora!');
    		this.prikaz = false;
-   }
+   } 
    	this.ime1 = '';
   	this.jmbg1 = '';
     this.bzk1 = '';
     console.log(bla2.value);
+    
 }
 
 onChange(deviceValue) {
@@ -52,8 +52,8 @@ onChange(deviceValue) {
   this.jmbg1 = '';
   this.bzk1 = '';
   this.show = false;
-
   console.log(this.spisakPacijenata);
+  console.log(deviceValue);
 }
 
 }

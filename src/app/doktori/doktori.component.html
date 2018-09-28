@@ -1,16 +1,16 @@
 	<h2>Doktori</h2>
 	 <br> 
 	<ng-container *ngIf = 'prikaz'> 
-		<ul *ngFor ='let doktor of ime3' class="border border-success rounded list-unstyled pl-3 pt-3 pb-3">
+		<ul *ngFor ='let doktor of ime3' class="border border-success rounded list-unstyled pl-2 pt-3 pb-3">
 			<li >{{'Ime: '+doktor.ime}} <br> {{'Specijalnost: '+doktor.specijalnost}}</li>
 		</ul>
 	 </ng-container>
 	
 	<br><br>
 	<form class="form-group" #bla = 'ngForm'>
-		<input [(ngModel)]= 'doktor.ime1' name = 'ime' type="text" placeholder="Ime i Prezime">
+		<input class="pl-2" [(ngModel)]= 'doktor.ime1' name = 'ime' type="text" placeholder="Ime i Prezime">
 		<br><br>
-		<input [(ngModel)]= 'doktor.spec1' name = 'specijalnost' type="text" placeholder="Specijalnost">
+		<input class="pl-2" [(ngModel)]= 'doktor.spec1' name = 'specijalnost' type="text" placeholder="Specijalnost">
 		<br><br>
 		<button class="btn btn-success" (click) = 'dodaj(bla)'>Dodaj</button>
 		<!-- <button type="submit">Dodaj</button> -->
