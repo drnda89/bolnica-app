@@ -37,11 +37,11 @@ export class PacijentiComponent implements OnInit {
    } else if(!this.imeDoktora) {
    		alert('Nema slobodnog doktora!');
    		this.prikaz = false;
-   } 
+   }
    	this.ime1 = '';
   	this.jmbg1 = '';
     this.bzk1 = '';
-    console.log(bla2.value);
+    console.log(bla2);
     
 }
 
