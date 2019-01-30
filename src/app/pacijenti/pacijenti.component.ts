@@ -23,7 +23,6 @@ export class PacijentiComponent implements OnInit {
    }
 
   ngOnInit() {
-  
   }
   
   pacijenti(bla2) {
@@ -42,16 +41,15 @@ export class PacijentiComponent implements OnInit {
   	this.jmbg1 = '';
     this.bzk1 = '';
     console.log(bla2);
-    
 }
 
 onChange(deviceValue) {
   this.pc = deviceValue;
   this.prikaz = true;
-  this.ime1 = '';
-  this.jmbg1 = '';
-  this.bzk1 = '';
-  this.show = false;
+  // this.ime1 = '';
+  // this.jmbg1 = '';
+  // this.bzk1 = '';
+  this.show = true;
   console.log(this.spisakPacijenata);
   console.log(deviceValue);
 }
