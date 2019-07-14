@@ -10,7 +10,7 @@ import { ShareService } from '../share.service';
 export class PacijentiComponent implements OnInit {
   // @Input() event;
   spisakPacijenata = [];
-  ime1 = 'Mitar Miric';
+  ime1 = 'Marko Markovic';
   jmbg1 = '445566778899';
   bzk1 = '1234';
   prikaz = false;
@@ -19,15 +19,14 @@ export class PacijentiComponent implements OnInit {
   pc;
 
   constructor(private share: ShareService) {
-    this.share.razmena.subscribe((bla2) => this.imeDoktora = bla2);
+    this.share.razmena.subscribe((forma) => this.imeDoktora = forma);
    }
 
   ngOnInit() {
-  
   }
   
-  pacijenti(bla2) {
-  	this.spisakPacijenata.push(bla2.value);
+  pacijenti(forma) {
+  	this.spisakPacijenata.push(forma.value);
   	this.prikaz = true;
   	if(this.ime1 === '' || this.jmbg1 === '' || this.bzk1 === '') {
       this.prikaz = false;
@@ -37,19 +36,19 @@ export class PacijentiComponent implements OnInit {
    } else if(!this.imeDoktora) {
    		alert('Nema slobodnog doktora!');
    		this.prikaz = false;
-   } 
+   }
    	this.ime1 = '';
   	this.jmbg1 = '';
     this.bzk1 = '';
-    console.log(bla2.value);
+    console.log(forma);
 }
 
 onChange(deviceValue) {
   this.pc = deviceValue;
   this.prikaz = true;
-  this.ime1 = '';
-  this.jmbg1 = '';
-  this.bzk1 = '';
+  // this.ime1 = '';
+  // this.jmbg1 = '';
+  // this.bzk1 = '';
   this.show = true;
   console.log(this.spisakPacijenata);
   console.log(deviceValue);
