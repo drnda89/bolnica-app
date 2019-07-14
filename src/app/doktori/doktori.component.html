@@ -7,11 +7,11 @@
 	 </ng-container>
 	
 	<br><br>
-	<form class="form-group" #bla = 'ngForm'>
+	<form class="form-group" #forma = 'ngForm'>
 		<input class="pl-2" [(ngModel)]= 'doktor.ime1' name = 'ime' type="text" placeholder="Ime i Prezime">
 		<br><br>
 		<input class="pl-2" [(ngModel)]= 'doktor.spec1' name = 'specijalnost' type="text" placeholder="Specijalnost">
 		<br><br>
-		<button class="btn btn-success" (click) = 'dodaj(bla)'>Dodaj</button>
+		<button class="btn btn-success" (click) = 'dodaj(forma)'>Dodaj</button>
 		<!-- <button type="submit">Dodaj</button> -->
 	</form>

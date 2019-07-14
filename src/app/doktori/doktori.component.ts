@@ -24,16 +24,16 @@ export class DoktoriComponent implements OnInit {
   ngOnInit() {
   }
 
-  dodaj(bla) {
+  dodaj(forma) {
 		this.prikaz = true;
-		this.dr = bla.value;
+		this.dr = forma.value;
 		this.ime3.push(this.dr);
 		console.log(this.doktor);
 	 
   	if(this.doktor.ime1 === '' || this.doktor.spec1 === '') {
   		this.prikaz = false;
-			this.ime3.splice(1);
-			this.ime3.pop();
+		this.ime3.splice(1);
+		this.ime3.pop();
   		alert('polje je prazno')
 		 }
 
@@ -48,7 +48,7 @@ export class DoktoriComponent implements OnInit {
     console.log(this.ime3);
   this.share.razmena.emit(this.ime3);  
     
-  	console.log(bla);			
+  	console.log(forma);			
       }
 
 }

@@ -1,7 +1,7 @@
 	<h2>Pacijenti</h2>
 	<ng-container *ngIf = 'prikaz'>
 		<ul *ngFor = 'let pacijent of spisakPacijenata' class="border border-primary rounded list-unstyled pl-2 pt-3 pb-3 mr-30">
-			<li >{{'Ime: '+pacijent.name}} <br> {{'JMBG: '+pacijent.jmbg}} <br> {{'Bzk: '+pacijent.bzk}} <br> {{pc ? 'Izabrani Lekar: ' + pc : ''}}</li>
+			<li >{{'Ime: '+pacijent.ime}} <br> {{'JMBG: '+pacijent.jmbg}} <br> {{'Bzk: '+pacijent.bzk}} <br> {{pc ? 'Izabrani Lekar: ' + pc : ''}}</li>
 			<select *ngIf = 'show' (change)="onChange($event.target.value)" class="custom-select">
 				<option>Izaberite Lekara</option>
 				<!-- <option>{{event.ime}}</option> -->
@@ -11,8 +11,8 @@
 	</ng-container>
 	<br><br>
 	<form class="form-group" #forma = 'ngForm'>
-		<input class="col-5" [(ngModel)] = 'ime1' name="name" type="text" placeholder="Ime I Prezime"><br><br>
+		<input class="col-5" [(ngModel)] = 'ime1' name="ime" type="text" placeholder="Ime I Prezime"><br><br>
 		<input class="col-5" [(ngModel)] = 'jmbg1' name="jmbg" type="text" placeholder="JMBG"><br><br>
 		<input class="col-5" [(ngModel)] = 'bzk1' name='bzk' type="text" placeholder="Br. Zdravstvenog Kartona"><br><br>
-		<button class="btn btn-primary" (click) = 'pacijenti(bla2)' type="button">Dodaj</button>
+		<button class="btn btn-primary" (click) = 'pacijenti(forma)' type="button">Dodaj</button>
 	</form>
